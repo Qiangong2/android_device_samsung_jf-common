@@ -42,7 +42,9 @@ BOARD_KERNEL_BASE := 0x80200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE := 2048
 LZMA_RAMDISK_TARGETS := recovery
-TARGET_KERNEL_CONFIG := lineageos_jf_defconfig
+#TARGET_KERNEL_CONFIG := lineageos_jf_defconfig
+#try out ubports?
+TARGET_KERNEL_CONFIG := ubports_jf_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/jf
 
 # Audio
