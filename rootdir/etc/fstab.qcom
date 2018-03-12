@@ -3,17 +3,17 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 #<src>                                           <mnt_point>    <type>  <mnt_flags and options>                                                                       <fs_mgr_flags>
-/dev/block/platform/msm_sdcc.1/by-name/boot      /boot          emmc    defaults                                                                                      recoveryonly
-/dev/block/platform/msm_sdcc.1/by-name/recovery  /recovery      emmc    defaults                                                                                      recoveryonly
-/dev/block/platform/msm_sdcc.1/by-name/system    /system        ext4    ro,barrier=1,errors=panic                                                                     wait
-/dev/block/platform/msm_sdcc.1/by-name/apnhlos   /firmware      vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337  wait
-/dev/block/platform/msm_sdcc.1/by-name/mdm       /firmware-mdm  vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337  wait
-/dev/block/platform/msm_sdcc.1/by-name/efs       /efs           ext4    nosuid,nodev,noatime,noauto_da_alloc,journal_async_commit,errors=panic                        wait,check,notrim
-/dev/block/platform/msm_sdcc.1/by-name/cache     /cache         f2fs    nosuid,nodev,noatime,rw,inline_xattr                                                          wait,check,formattable
-/dev/block/platform/msm_sdcc.1/by-name/cache     /cache         ext4    nosuid,nodev,noatime,noauto_da_alloc,journal_async_commit,errors=panic                        wait,check,formattable
+/dev/mmcblk0p20      /boot          emmc    defaults                                                                                      recoveryonly
+/dev/mmcblk0p21  /recovery      emmc    defaults                                                                                      recoveryonly
+/dev/mmcblk0p16    /system        ext4    ro,barrier=1,errors=panic                                                                     wait
+/dev/mmcblk0p1   /firmware      vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337  wait
+/dev/mmcblk0p2       /firmware-mdm  vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337  wait
+/dev/mmcblk0p10       /efs           ext4    nosuid,nodev,noatime,noauto_da_alloc,journal_async_commit,errors=panic                        wait,check,notrim
+#/dev/block/platform/msm_sdcc.1/by-name/cache     /cache         f2fs    nosuid,nodev,noatime,rw,inline_xattr                                                          wait,check,formattable
+/dev/mmcblk0p18     /cache         ext4    nosuid,nodev,noatime,noauto_da_alloc,journal_async_commit,errors=panic                        wait,check,formattable
 #/dev/block/platform/msm_sdcc.1/by-name/userdata  /data          f2fs    nosuid,nodev,noatime,rw,inline_xattr                                                          wait,check,formattable,encryptable=footer
 /dev/mmcblk0p29  /data          ext4    nosuid,nodev,noatime,noauto_da_alloc,journal_async_commit,errors=panic                        wait,check,formattable,encryptable=footer
-/dev/block/platform/msm_sdcc.1/by-name/fota      /misc          emmc    defaults                                                                                      defaults
+/dev/mmcblk0p22      /misc          emmc    defaults                                                                                      defaults
 
 /devices/platform/msm_sdcc.2/mmc_host/mmc2*      auto           auto    defaults                                                                                      voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/msm_hsusb_host/usb*            auto           auto    defaults                                                                                      voldmanaged=usb:auto
