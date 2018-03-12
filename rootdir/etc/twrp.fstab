@@ -1,11 +1,11 @@
-/boot         emmc        /dev/mmcblk0p20
-/system       ext4        /dev/mmcblk0p16
+/boot         emmc        /dev/block/platform/msm_sdcc.1/by-name/boot
+/system       ext4        /dev/block/platform/msm_sdcc.1/by-name/system
 /data         ext4        /dev/mmcblk0p29  length=-16384
-/cache        ext4        /dev/mmcblk0p18
-/recovery     emmc        /dev/mmcblk0p21
-/efs          ext4        /dev/mmcblk0p10                           flags=display="EFS";backup=1
+/cache        ext4        /dev/block/platform/msm_sdcc.1/by-name/cache
+/recovery     emmc        /dev/block/platform/msm_sdcc.1/by-name/recovery
+/efs          ext4        /dev/block/platform/msm_sdcc.1/by-name/efs                           flags=display="EFS";backup=1
 /external_sd  vfat        /dev/block/mmcblk1p1                             /dev/block/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
 /usb-otg      vfat        /dev/block/sda1                                  /dev/block/sda      flags=display="USB-OTG";storage;wipeingui;removable
-/modem        ext4        /dev/mmcblk0p1
-/mdm          emmc        /dev/mmcblk0p2
-/misc         emmc        /dev/mmcblk0p22
+/modem        ext4        /dev/block/platform/msm_sdcc.1/by-name/apnhlos
+/mdm          emmc        /dev/block/platform/msm_sdcc.1/by-name/mdm
+/misc         emmc        /dev/block/platform/msm_sdcc.1/by-name/fota
